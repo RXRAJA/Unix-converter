@@ -49,7 +49,12 @@ export class SecondsToDateComponent implements OnInit {
     var getDate = new Date();
     this.secondsInp = moment(getDate).unix();
     this.convertToDate({value: this.secondsInp})
-    this.secondsInput.nativeElement.focus();
+    
+    //TO ELEMINATE MATERIAL DESIGN FLAW IN INPUT FIELD
+    var divs =  document.getElementById("std").querySelectorAll('.mdl-textfield');
+    for (var i = 0; i < divs.length; i++) {
+        divs[i].classList.add('is-dirty');
+    }
   }
 
 }

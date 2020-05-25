@@ -54,7 +54,7 @@ export class DateToSecondsComponent implements OnInit {
     this.milliSecs = moment(getDate).unix();
 
     //TO ELEMINATE MATERIAL DESIGN FLAW IN INPUT FIELD
-    var divs = document.querySelectorAll('.mdl-textfield');
+    var divs =  document.getElementById("dts").querySelectorAll('.mdl-textfield');
     for (var i = 0; i < divs.length; i++) {
         divs[i].classList.add('is-dirty');
     }
