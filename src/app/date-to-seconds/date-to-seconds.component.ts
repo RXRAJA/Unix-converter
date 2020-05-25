@@ -52,6 +52,12 @@ export class DateToSecondsComponent implements OnInit {
     this.minuteInput = parseInt(moment(getDate).format('mm'));
     this.secondInput = parseInt(moment(getDate).format('ss'));
     this.milliSecs = moment(getDate).unix();
+
+    //TO ELEMINATE MATERIAL DESIGN FLAW IN INPUT FIELD
+    var divs = document.querySelectorAll('.mdl-textfield');
+    for (var i = 0; i < divs.length; i++) {
+        divs[i].classList.add('is-dirty');
+    }
   }
   
 }
