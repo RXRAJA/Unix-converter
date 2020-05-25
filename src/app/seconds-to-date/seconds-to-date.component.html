@@ -1,0 +1,37 @@
+    <div class="currentUtcPallate">
+        <div>
+            <div class='currentUtcPallateDiv'>
+                <p class='currentUtcPallateLabel'>UTC date</p>
+                <h5>{{utcDate}}</h5>
+            </div>
+            <div class='currentUtcPallateDiv'>
+                <p class='currentUtcPallateLabel'>UTC time</p>
+                <h5>{{utcTime}}</h5>
+            </div>
+            <div class='currentUtcPallateDiv'>
+                <p class='currentUtcPallateLabel'>UNIX time</p>
+                <h5>{{unixSecs}}</h5>
+            </div>
+        </div>
+    </div>
+    <form style="width: 300px;">
+        
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <label class="mdl-textfield__label" for="secondsInput">Convert seconds</label>
+            <input class="mdl-textfield__input" type="number" #secondsInput id='secondsInput' name="seconds" (keyup)='convertToDate(secondsInput)' (paste) = 'convertToDate(secondsInput)' [(ngModel)]='secondsInp'>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <label class="mdl-textfield__label" for="utc">to UTC time & date:</label>
+            <input class="mdl-textfield__input" type="text" id='utc' value='{{utc}}' placeholder=" " readonly>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <label class="mdl-textfield__label" for="local">to Local time & date:</label>
+            <input class="mdl-textfield__input" type="text" id='local'  value='{{local}}' placeholder=" " readonly>
+        </div>
+        <div>
+            <button class="mdl-button mdl-js-button mdl-button--accent" (click)='currentDateFun()' style='float:right'>
+                Now
+            </button>
+        </div>
+    </form>
+   

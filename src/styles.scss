@@ -1,0 +1,50 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+.compDiv{
+    padding: 3rem;
+    margin: 3rem;
+    display: flex;
+    justify-content: center;
+}
+.currentUtcPallate{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #707070;
+}
+.currentUtcPallateLabel{
+    line-height: 16px;
+    min-height: 16px;
+    color: #707070;
+    font-size: 13;
+    font-family: Arial;
+    text-decoration: none;
+    padding-top: 5px;
+}
+
+.currentUtcPallateDiv{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.dispBlock{
+    display: block;
+}
+
+.headerDiv{
+    text-align: center;
+    background-color: #C2185B;
+    color: #fff;
+    // font-weight: 700;
+    font-weight: 500;
+    font-size: 13px;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    line-height: 64px;
+    padding: 16px 16px;
+    color: #fff;
+    box-sizing: border-box;
+    border-bottom: 3px solid transparent;
+}
